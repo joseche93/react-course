@@ -101,12 +101,17 @@ var PokeRow = (function (_React$Component) {
 	}
 
 	_createClass(PokeRow, [{
+		key: 'onClick',
+		value: function onClick(event) {
+			alert(this.props.name);
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			return _react2['default'].createElement(
 				'li',
 				null,
-				_react2['default'].createElement(_pokeavatar2['default'], { number: this.props.number }),
+				_react2['default'].createElement(_pokeavatar2['default'], { number: this.props.number, onClick: this.onClick.bind(this) }),
 				this.props.name
 			);
 		}
@@ -167,7 +172,7 @@ var PokeTable = (function (_React$Component) {
 				{ className: 'Poketable' },
 				this.props.pokemons.map(function (pokemon) {
 
-					return _react2['default'].createElement(PokeRow, { key: pokemon.number, name: pokemon.name, number: pokemon.number });
+					return _react2['default'].createElement(_pokerow2['default'], { key: pokemon.number, name: pokemon.name, number: pokemon.number });
 				})
 			);
 		}

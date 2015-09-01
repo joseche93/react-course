@@ -1,6 +1,6 @@
 /*Module Dependencies*/
 import React from 'react';
-import PokeTable from './components/poketable';
+import PokeApp from './components/pokeapp';
 
 var pokemons =[
 		{number: 1, name: 'bulbasaur'},
@@ -9,7 +9,7 @@ var pokemons =[
 	];
 	
 	React.render(
-		<PokeTable pokemons={pokemons} />,
+		<PokeApp pokemons={pokemons} />,
 		document.getElementById('container')
 	);
 
